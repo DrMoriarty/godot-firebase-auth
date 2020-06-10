@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="drm.godot.plugin">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="ru.mobilap.firebaseauth">
 
   <application>
     <!--
@@ -12,7 +12,7 @@
     -->
     <meta-data
         android:name="org.godotengine.plugin.v1.FirebaseAuth"
-        android:value="drm.godot.plugin.FirebaseAuthPlugin" />
+        android:value="ru.mobilap.firebaseauth.FirebaseAuth" />
   </application>
   <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
