@@ -1,8 +1,8 @@
 [config]
 
 name="FirebaseAuth"
-binary_type="remote"
-binary="ru.mobilap.godot:godot-firebase-auth:+"
+binary_type="local"
+binary="FirebaseAuth.release.aar"
 
 [dependencies]
 

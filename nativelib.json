@@ -1,0 +1,22 @@
+{
+  "name": "firebase-auth",
+  "description": "Firebase Auth plugin",
+  "version": "0.1.0",
+  "license": "MIT",
+  "url": "https://github.com/DrMoriarty/godot-firebase-auth",
+  "dependencies": [
+    "firebase-core"
+  ],
+  "files": {
+    "scripts": "scripts"
+  },
+  "autoload": {
+    "auth": "*res://scripts/auth.gd"
+  },
+  "platform_android": {
+    "files": {
+      "android-plugin/FirebaseAuth.gdap": "android/plugins/",
+      "android-plugin/build/outputs/aar/FirebaseAuth.release.aar": "android/plugins/"
+    }
+  }
+}
