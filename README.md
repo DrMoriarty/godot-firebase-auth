@@ -1,11 +1,5 @@
-# godot-firebase-auth
+# Firebase Auth plugin for godot engine. 
 
-Firebase Auth plugin for godot engine. You need godot version 3.2.2.beta or higher.
+## Installation
 
-## Android usage
-
-Copy `FirebaseAuth.gdap` to `android/plugins`. Then enable plugin `FirebaseAuth` in export settings.
-
-## iOS usage
-
-Coming soon...
+Use [NativeLib Addon](https://github.com/DrMoriarty/nativelib) or [NativeLib-CLI](https://github.com/DrMoriarty/nativelib-cli) for installation.
