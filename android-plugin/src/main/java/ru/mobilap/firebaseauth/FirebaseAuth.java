@@ -90,7 +90,7 @@ public class FirebaseAuth extends GodotPlugin {
     public void sign_in_anonymously()
     {
         mAuth.signInAnonymously()
-            .addOnCompleteListener(getGodot(), new OnCompleteListener<AuthResult>() {
+            .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(Task<AuthResult> task) {
                         if (task.isSuccessful()) {
@@ -111,7 +111,7 @@ public class FirebaseAuth extends GodotPlugin {
     {
         AuthCredential credential = FacebookAuthProvider.getCredential(token);
         mAuth.signInWithCredential(credential)
-            .addOnCompleteListener(getGodot(), new OnCompleteListener<AuthResult>() {
+            .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(Task<AuthResult> task) {
                     if (task.isSuccessful()) {

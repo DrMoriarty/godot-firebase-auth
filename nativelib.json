@@ -1,9 +1,17 @@
 {
   "name": "firebase-auth",
+  "display_name": "Firebase Auth",
   "description": "Firebase Auth plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "godot_version": "3.3.0",
   "license": "MIT",
   "url": "https://github.com/DrMoriarty/godot-firebase-auth",
+  "category": "misc",
+  "author": {
+    "name": "DrMoriarty",
+    "url": "https://github.com/DrMoriarty",
+    "donate": "https://ko-fi.com/drmoriarty"
+  },
   "dependencies": [
     "firebase-core"
   ],
