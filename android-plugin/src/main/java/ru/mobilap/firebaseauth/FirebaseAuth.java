@@ -33,6 +33,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -40,6 +43,8 @@ import com.google.firebase.auth.AuthResult;
 //import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.FacebookAuthProvider;
+import com.google.firebase.auth.PlayGamesAuthProvider;
+import com.google.firebase.auth.PlayGamesAuthCredential;
 
 import org.godotengine.godot.Godot;
 import org.godotengine.godot.plugin.GodotPlugin;
@@ -66,6 +71,7 @@ public class FirebaseAuth extends GodotPlugin {
     public List<String> getPluginMethods() {
         return Arrays.asList(
                               "sign_in_anonymously",
+                              "sign_in_play_game",
                               "sign_in_facebook",
                               "is_logged_in",
                               "user_name",
@@ -103,6 +109,28 @@ public class FirebaseAuth extends GodotPlugin {
                             Log.w(TAG, "signInAnonymously:failure", task.getException());
                     
                         }
+                    }
+                });
+    }
+
+    public void sign_in_play_game(final String serverAuthCode)
+    {
+        AuthCredential credential = PlayGamesAuthProvider.getCredential(serverAuthCode);
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithCredential:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            emitSignal(loggedInSignal.getName());
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithCredential:failure", task.getException());
+
+                        }
+
                     }
                 });
     }

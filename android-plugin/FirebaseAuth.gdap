@@ -7,5 +7,5 @@ binary="FirebaseAuth.release.aar"
 [dependencies]
 
 local=[]
-remote=[]
+remote=["com.google.firebase:firebase-auth:19.2.0", "com.google.android.gms:play-services-games:21.0.0", "com.google.android.gms:play-services-auth:19.0.0"]
 custom_maven_repos=["https://dl.bintray.com/mobilap/maven/"]

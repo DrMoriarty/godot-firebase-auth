@@ -57,6 +57,10 @@ func login():
     if _fba != null:
         _fba.sign_in_anonymously()
 
+func login_play_game_service(server_auth_code):
+    if _fba != null:
+        _fba.sign_in_play_game(server_auth_code)
+
 func login_facebook(token):
     if _fba != null:
         _fba.sign_in_facebook(token)
