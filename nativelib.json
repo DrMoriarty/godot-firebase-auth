@@ -2,7 +2,7 @@
   "name": "firebase-auth",
   "display_name": "Firebase Auth",
   "description": "Firebase Auth plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "godot_version": "3.3.0",
   "license": "MIT",
   "url": "https://github.com/DrMoriarty/godot-firebase-auth",
